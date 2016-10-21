@@ -17,9 +17,6 @@ namespace IntToHex
             InitializeComponent();
         }
 
-        // Six decimal places
-        private const int C_FIX = 6;  
-
         private void onClickConvert(object sender, EventArgs e)
         {
 
@@ -27,33 +24,17 @@ namespace IntToHex
             listBox1.BackColor = Color.White;
 
             if (!string.IsNullOrEmpty(txtDecimal.Text))
-            {
-                string a = string.Format("#{0}", IntToHexString(int.Parse(txtDecimal.Text), C_FIX));
-                label1.Text = a;
-                listBox1.BackColor = ColorTranslator.FromHtml(a);
+            {                
+                int c = int.Parse(txtDecimal.Text);
+                var color = Color.FromArgb(0xFF, c & 0xFF, (c >> 8) & 0xFF, (c >> 16) & 0xFF);
+                label1.Text = string.Format("#{0:X2}{1:X2}{2:X2}", color.R, color.G, color.B);                
+                listBox1.BackColor = color;
             }
             else
             {
                 MessageBox.Show("Field can not be blank");                
             }
             
-        }
-
-        private static String IntToHexString(int n, int len)
-        {
-            char[] ch = new char[len--];
-            for (int i = len; i >= 0; i--)
-            {
-                ch[len - i] = ByteToHexChar((byte)((uint)(n >> 4 * i) & 15));
-            }
-            return new String(ch);
-        }
-
-        private static char ByteToHexChar(byte b)
-        {
-            if (b < 0 || b > 15)
-                throw new Exception("IntToHexChar: input out of range for Hex value");
-            return b < 10 ? (char)(b + 48) : (char)(b + 55);
         }
 
     }
