@@ -1,0 +1,9 @@
+C:\IntToHex\IntToHex\IntToHex\bin\Debug\IntToHex.exe.config
+C:\IntToHex\IntToHex\IntToHex\obj\Debug\IntToHex.csprojResolveAssemblyReference.cache
+C:\IntToHex\IntToHex\IntToHex\obj\Debug\IntToHex.Form1.resources
+C:\IntToHex\IntToHex\IntToHex\obj\Debug\IntToHex.Properties.Resources.resources
+C:\IntToHex\IntToHex\IntToHex\obj\Debug\IntToHex.csproj.GenerateResource.Cache
+C:\IntToHex\IntToHex\IntToHex\bin\Debug\IntToHex.exe
+C:\IntToHex\IntToHex\IntToHex\bin\Debug\IntToHex.pdb
+C:\IntToHex\IntToHex\IntToHex\obj\Debug\IntToHex.exe
+C:\IntToHex\IntToHex\IntToHex\obj\Debug\IntToHex.pdb
